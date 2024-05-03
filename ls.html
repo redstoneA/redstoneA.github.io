@@ -2,27 +2,96 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>604社区开发者官网(Fanbook社区,不是班级资源站)</title>
-    <link rel="stylesheet" href="114514.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>604社区开发者官网</title>
+    <style>
+        body, h1, h2, p, form {
+            margin: 0;
+            padding: 0;
+            color: #fff;
+            font-family: 'Arial', sans-serif;
+        }
+        body {
+            background: #121212;
+            perspective: 1000px;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            text-align: center;
+            transform-style: preserve-3d;
+        }
+        .card {
+            background: #1e1e1e;
+            border-radius: 10px;
+            padding: 50px;
+            margin: 20px;
+            transition: transform 0.5s;
+            transform-style: preserve-3d;
+            cursor: pointer;
+        }
+        .card:hover {
+            transform: rotateX(20deg); /* 修改为上下倾斜 */
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        h2 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 1em;
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+        button {
+            padding: 10px 20px;
+            border: none;
+            background: #333;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        button:hover {
+            background: #444;
+        }
+    </style>
 </head>
 <body>
-    <img src="a.png" alt="这是一个图标">
-    <h1>604社区官方资源站(Fanbook社区,不是班级资源站)</h1>
-    <h2>我们604社区是由604班部分同学组成的，我们正在开发程序，目前已公布的有：</h2>
-    <form action="https://wwt.lanzn.com/iVGlS1r3bdkb" method="get">
-  <button type="submit">python工具大全</button>
-</form>
-    <form action="https://wwt.lanzn.com/iA1pK1uwpsxa" method="get">
-  <button type="submit">mcfz我的世界辅助工具</button>
-</form>
-    <h2>如果你想要加入604社区，请发送电子邮件到zhangyipengmc@qq.com，表明身份后我们会让你加入</h2>
-    <h2>604社区是一个基于Fanbook的社区，本班同学皆可加入，如果你掌握了至少一种编程语言，可以将你的程序上传到本站</h2>
-    <h2>即便你只会scratch，也可以上传你的sb3文件</h2>
-    <h1>604社区作品上传须知</h1>
-    <p>1，将作品打包为exe文件，然后压缩为zip文件，在604社区找管理员审核后将会上传</p>
-    <p>2，上传后本站不会自动更新版本，请手动再次上传</p>
-    <p>3，由于本站基于githubpages，是静态网站，所以必须发给管理员，自己是没办法上传的，即使服主也不行</p>
-    <p>4，如果要对本站提意见，请看604社区</p>
-    <p>我们正在开发更多东西中，敬请期待</p>
+    <div class="container">
+        <div class="card">
+            <img src="a.png" alt="这是一个图标">
+            <h1>604社区官方资源站</h1>
+            <h2>我们604社区是由604班部分同学组成的，我们正在开发程序，目前已公布的有：</h2>
+            <form action="https://wwt.lanzn.com/iVGlS1r3bdkb" method="get">
+                <button type="submit">python工具大全</button>
+            </form>
+            <form action="https://wwt.lanzn.com/iA1pK1uwpsxa" method="get">
+                <button type="submit">mcfz我的世界辅助工具</button>
+            </form>
+            <h2>如果你想要加入604社区，请发送电子邮件到zhangyipengmc@qq.com，表明身份后我们会让你加入</h2>
+            <h2>604社区是一个基于Fanbook的社区，本班同学皆可加入，如果你掌握了至少一种编程语言，可以将你的程序上传到本站</h2>
+            <h2>即便你只会scratch，也可以上传你的sb3文件</h2>
+            <h1>604社区作品上传须知</h1>
+            <p>1. 将作品打包为exe文件，然后压缩为zip文件，在604社区找管理员审核后将会上传</p>
+            <p>2. 上传后本站不会自动更新版本，请手动再次上传</p>
+            <p>3. 由于本站基于githubpages，是静态网站，所以必须发给管理员，自己是没办法上传的，即使服主也不行</p>
+            <p>4. 如果要对本站提意见，请看604社区</p>
+            <p>我们正在开发更多东西中，敬请期待</p>
+        </div>
+    </div>
+    <script>
+        // JavaScript代码可以根据需要添加，例如处理表单提交，实现更复杂的动画等
+    </script>
 </body>
 </html>

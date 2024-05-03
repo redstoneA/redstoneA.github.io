@@ -1,46 +1,95 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="zh">
-    <head>
-        <meta charset="utf-8">
-        <title>604官网</title>
-        <link rel="stylesheet" href="114514.css">
-        <style>
-  figure {
-    position: relative; /* 使figure成为定位上下文 */
-  }
+<head>
+    <meta charset="utf-8">
+    <title>604官网</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+            font-family: 'Arial', sans-serif;
+            background: #f0f0f0;
+        }
 
-  figcaption {
-    position: absolute; /* 绝对定位文字 */
-    top: 50%; /* 根据需要调整垂直位置 */
-    left: 50%; /* 根据需要调整水平位置 */
-    transform: translate(-50%, -50%); /* 居中文字 */
-    color: white; /* 文字颜色，确保在深色图片上可见 */
-    font-size: 24px; /* 根据需要设置字体大小 */
-    text-align: center; /* 可选，居中文本 */
-    width: 100%; /* 使文本占据整个图片宽度 */
-    padding: 10px; /* 可选，添加内边距以增加视觉空间 */
-  }
-</style>
+        .scene {
+            perspective: 1200px;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
-    </head>
-    <body>
-        <figure>
-            <img src="ba.png">
-            <h1 style="position: absolute; top:0; left: 0">604班级官网</h1>
-        <figcaption><ul>
-            <li>
-                <figure>
-                    <img src="b.png">
-                    <figcaption><a href="l.html">604班级资源站</a></figcaption>
-                </figure>
-            </li>
-            <li>
-                <figure>
-                    <img src="b.png">
-                    <figcaption><a href="ls.html">604社区开发者官网</a></figcaption>
-                </figure>
-            </li>
-        </ul></figcaption>
-        </figure>
-    </body>
+        .card {
+            width: 300px;
+            height: 400px;
+            background: #fff;
+            border-radius: 6px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: transform 1s;
+            transform-style: preserve-3d;
+            cursor: pointer;
+        }
+
+        .card:hover {
+            transform: rotateY(20deg);
+        }
+
+        .card img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 6px 6px 0 0;
+        }
+
+        .card figcaption {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            right: 20px;
+            color: #333;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        .card a {
+            color: #007bff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .card a:hover {
+            color: #0056b3;
+        }
+
+        .welcome {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 48px;
+            font-weight: bold;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="scene">
+        <div class="welcome">604班级官网</div>
+        <div class="card" onclick="window.location.href='l.html'">
+            <img src="ba.png" alt="604班级资源站">
+            <figcaption><a href="l.html">604班级资源站</a></figcaption>
+        </div>
+        <div class="card" onclick="window.location.href='ls.html'">
+            <img src="a.png" alt="604社区开发者官网">
+            <figcaption><a href="ls.html">604社区开发者官网</a></figcaption>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript 代码可以根据需要添加，例如处理用户交互等
+    </script>
+</body>
 </html>

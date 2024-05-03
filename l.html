@@ -2,22 +2,91 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>604班级资源站</title>
-    <link rel="stylesheet" href="114514.css">
+    <style>
+        body, h1, h2, p, form {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #121212;
+            color: #fff;
+            perspective: 1000px;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            padding-top: 50px;
+            text-align: center;
+            transition: transform 0.5s;
+        }
+        h1, h2 {
+            color: #FFD700;
+        }
+        p {
+            color: #BBB;
+            margin: 10px 0;
+        }
+        .button {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px 20px;
+            background-color: #FFD700;
+            color: #121212;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .button:hover {
+            background-color: #C0C0C0;
+        }
+        .button:active {
+            transform: translateY(4px);
+        }
+        .form-container {
+            margin: 20px 0;
+        }
+        /* 3D动画效果 */
+        .container:hover {
+            transform: rotateX(15deg);
+        }
+    </style>
 </head>
 <body>
-    <h1>604班级资源站</h1>
-    <h2>非本班成员不要访问，谢谢配合（我们给你发了链接除外）</h2>
-    <p>1,604社区系列(由朱**创建的604社区成员制作的程序)</p>
-    <form action="https://wwt.lanzn.com/iVGlS1r3bdkb" method="get">
-  <button type="submit">python工具大全</button>
-</form>
-    <form action="https://wwt.lanzn.com/iA1pK1uwpsxa" method="get">
-  <button type="submit">mcfz我的世界辅助工具</button>
-</form>
-    <h1>2,实用资源</h1>
-    <form action="https://www.wsmdn.github.io" method="get"><button>MDN的资源站</button></form>
-    <p>这就没了，本站知名度太低了，谁能宣传一下？</p>
-    <p>如果需要上传你的作品，请发送电子邮件到zhangyipengmc@qq.com，604社区成员可以直接在社区里发</p>
+    <div class="container">
+        <h1>604班级资源站</h1>
+        <h2>非本班成员不要访问，谢谢配合（我们给你发了链接除外）</h2>
+        <p>1. 604社区系列（由朱**创建的604社区成员制作的程序）</p>
+        <div class="form-container">
+            <form action="https://wwt.lanzn.com/iVGlS1r3bdkb" method="get">
+                <button class="button" type="submit">python工具大全</button>
+            </form>
+            <form action="https://wwt.lanzn.com/iA1pK1uwpsxa" method="get">
+                <button class="button" type="submit">mcfz我的世界辅助工具</button>
+            </form>
+        </div>
+        <p>2. 实用资源</p>
+        <div class="form-container">
+            <form action="https://www.wsmdn.github.io" method="get">
+                <button class="button">MDN的资源站(由b站up主我是檬D柠提供)</button>
+            </form>
+        </div>
+        <p>这就没了，本站知名度太低了，谁能宣传一下？</p>
+        <p>如果需要上传你的作品，请发送电子邮件到zhangyipengmc@qq.com，604社区成员可以直接在社区里发</p>
+    </div>
+
+    <script>
+        // 简单的JavaScript用于处理3D动画效果
+        const container = document.querySelector('.container');
+        container.addEventListener('mouseover', () => {
+            container.style.transform = 'rotateX(15deg)';
+        });
+        container.addEventListener('mouseout', () => {
+            container.style.transform = 'rotateX(0deg)';
+        });
+    </script>
 </body>
 </html>
