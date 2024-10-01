@@ -1,0 +1,72 @@
+/* styles.css */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #333; /* 深灰色背景 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.background-image {
+    position: relative;
+    width: 100%;
+    height: 300px; /* 背景图高度 */
+    background-image: linear-gradient(rgba(51, 51, 51, 0), rgba(51, 51, 51, 1)), url('bg.webp'); /* 渐变背景 */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    color: white;
+    font-size: 2em;
+    text-align: center;
+    z-index: 1;
+    position: relative;
+}
+
+.subsites {
+    display: flex;
+    flex-wrap: wrap; /* 多行布局 */
+    justify-content: space-around;
+    width: 100%;
+    padding: 20px 0;
+    background-color: #333; /* 深灰色背景 */
+    min-height: 600px; /* 增加最小高度 */
+}
+
+.subsite {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.subsite img {
+    width: 100px; /* 图标大小可以根据实际调整 */
+    height: auto;
+}
+
+.subsite a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    display: block;
+    margin-top: 10px;
+}
+
+.description {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    padding: 20px;
+    max-width: 800px;
+    text-align: center;
+    color: white;
+    background-color: #333; /* 初始背景颜色 */
+}
+
+.description.visible {
+    opacity: 1;
+}
+

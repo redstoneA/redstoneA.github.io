@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="utf-8">
+    <title>604社区官网</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+            font-family: 'Arial', sans-serif;
+            background: #f0f0f0;
+        }
+
+        .scene {
+            perspective: 1200px;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card {
+            width: 300px;
+            height: 400px;
+            background: #fff;
+            border-radius: 6px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: transform 1s;
+            transform-style: preserve-3d;
+            cursor: pointer;
+        }
+
+        .card:hover {
+            transform: rotateY(20deg);
+        }
+
+        .card img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 6px 6px 0 0;
+        }
+
+        .card figcaption {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            right: 20px;
+            color: #333;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        .card a {
+            color: #007bff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .card a:hover {
+            color: #0056b3;
+        }
+
+        .welcome {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 48px;
+            font-weight: bold;
+            color: #333;
+        }
+
+    </style>
+</head>
+<body style="background-image: url('bg.webp');
+             background-repeat: no-repeat;
+             backgroud-size: cover;
+">
+    <div class="scene">
+        <div class="welcome" style="color: white;">604社区官网</div>
+        <div class="welcome">
+            <img src="604 Community Official Website.webp" alt="604社区官网图标" height="50">
+        </div>
+        <div class="card" onclick="window.location.href='l.html'">
+            <img src="qt.webp" alt="604社区资源站">
+            <figcaption><a href="l.html">604社区资源站</a></figcaption>
+        </div>
+        <div class="card" onclick="window.location.href='ls.html'">
+            <img src="a.webp" alt="604社区开发者官网">
+            <figcaption><a href="ls.html">604社区开发者官网</a></figcaption>
+        </div>
+        <div class="card" onclick="window.location.href='co.html'">
+            <img src="qt.webp" alt="代码开源页">
+            <figcaption><a href="co.html">代码开源页</a></figcaption>
+        </div>
+        <div class="card" onclick="window.location.href='wg.html'">
+            <img src="qt.webp" alt="网页小游戏">
+            <figcaption><a href="wg.html">网页小游戏</a></figcaption>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript 代码可以根据需要添加，例如处理用户交互等
+    </script>
+</body>
+</html>

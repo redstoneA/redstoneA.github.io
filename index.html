@@ -1,110 +1,65 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="zh-CN">
 <head>
-    <meta charset="utf-8">
-    <title>604社区官网</title>
-    <style>
-        body, html {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            overflow: hidden;
-            font-family: 'Arial', sans-serif;
-            background: #f0f0f0;
-        }
-
-        .scene {
-            perspective: 1200px;
-            width: 100%;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .card {
-            width: 300px;
-            height: 400px;
-            background: #fff;
-            border-radius: 6px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            transition: transform 1s;
-            transform-style: preserve-3d;
-            cursor: pointer;
-        }
-
-        .card:hover {
-            transform: rotateY(20deg);
-        }
-
-        .card img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 6px 6px 0 0;
-        }
-
-        .card figcaption {
-            position: absolute;
-            bottom: 20px;
-            left: 20px;
-            right: 20px;
-            color: #333;
-            font-size: 20px;
-            text-align: center;
-        }
-
-        .card a {
-            color: #007bff;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        .card a:hover {
-            color: #0056b3;
-        }
-
-        .welcome {
-            text-align: center;
-            margin-bottom: 40px;
-            font-size: 48px;
-            font-weight: bold;
-            color: #333;
-        }
-
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>604社区大杂烩网</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body style="background-image: url('bg.webp');
-             background-repeat: no-repeat;
-             backgroud-size: cover;
-">
-    <div class="scene">
-        <div class="welcome" style="color: white;">604社区官网</div>
-        <div class="welcome">
-            <img src="604 Community Official Website.webp" alt="604社区官网图标" height="50">
-        </div>
-        <div class="card" onclick="window.location.href='l.html'">
-            <img src="qt.webp" alt="604社区资源站">
-            <figcaption><a href="l.html">604社区资源站</a></figcaption>
-        </div>
-        <div class="card" onclick="window.location.href='ls.html'">
-            <img src="a.webp" alt="604社区开发者官网">
-            <figcaption><a href="ls.html">604社区开发者官网</a></figcaption>
-        </div>
-        <div class="card" onclick="window.location.href='co.html'">
-            <img src="qt.webp" alt="代码开源页">
-            <figcaption><a href="co.html">代码开源页</a></figcaption>
-        </div>
-        <div class="card" onclick="window.location.href='wg.html'">
-            <img src="qt.webp" alt="网页小游戏">
-            <figcaption><a href="wg.html">网页小游戏</a></figcaption>
-        </div>
+<body>
+    <div class="background-image">
+        <header>
+            <h1>604社区大杂烩网</h1>
+        </header>
     </div>
-
+    <section class="subsites">
+        <div class="subsite">
+            <img src="604 Community.webp" alt="604社区官网图标">
+            <a href="604home.html">604社区官网</a>
+        </div>
+        <div class="subsite">
+            <img src="ZZCode.webp" alt="ZZCode官网图标">
+            <a href="ZZCode.html">ZZCode官网</a>
+        </div>
+        <div class="subsite">
+            <img src="GZGJ-II.webp" alt="GZGJ-II官网图标">
+            <a href="GZGJ-II.html">GZGJ-II官网</a>
+        </div>
+    </section>
+    <section class="description" id="description">
+        <h1>604社区大杂烩网简介</h1>
+        <h2>本站由于2024年间成立的604社区创建（当时腐竹处于六年级，顾以此命名）</h2>
+        <h3>604社区开发了一些程序</h3>
+        <h3>本站保留了原604社区官网的同时为我们的重要的程序（如GZGJ-II和ZZCode）单独设立了官网</h3>
+    </section>
     <script>
-        // JavaScript 代码可以根据需要添加，例如处理用户交互等
+        let lastScrollTop = 0;
+        const description = document.getElementById('description');
+
+        window.addEventListener('scroll', () => {
+            const rect = description.getBoundingClientRect();
+            const currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+            // 判断滚动方向
+            if (currentScrollTop > lastScrollTop) {
+                // 向下滚动
+                if (rect.top <= window.innerHeight) {
+                    description.classList.add('visible');
+                    description.style.backgroundColor = `rgb(${Math.min(255, Math.floor((1 - rect.top / window.innerHeight) * 255))}, ${Math.min(255, Math.floor((1 - rect.top / window.innerHeight) * 255))}, ${Math.min(255, Math.floor((1 - rect.top / window.innerHeight) * 255))})`;
+                } else {
+                    description.classList.remove('visible');
+                    description.style.backgroundColor = '#333';
+                }
+            } else {
+                // 向上滚动
+                if (rect.top >= window.innerHeight) {
+                    description.classList.remove('visible');
+                    description.style.backgroundColor = '#333';
+                }
+            }
+
+            lastScrollTop = currentScrollTop;
+        });
     </script>
 </body>
 </html>

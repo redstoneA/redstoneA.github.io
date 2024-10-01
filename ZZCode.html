@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>ZZCode官网</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #333; /* 深灰色背景 */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .header img {
+            width: 100px; /* 图标大小可以根据实际调整 */
+            height: auto;
+        }
+
+        .header h1 {
+            color: white;
+            margin: 10px 0;
+        }
+
+        .header p {
+            color:white;
+        }
+
+        .download-button {
+            background-color: #4CAF50; /* 绿色按钮 */
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 20px 0;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .content {
+            color: white;
+            text-align: center;
+            margin-top: 40px;
+            opacity: 0; /* 初始透明度为 0 */
+            transition: opacity 0.5s ease-in-out; /* 添加过渡效果 */
+        }
+
+        .content h1, .content h2, .content h3, .content a {
+            color: white;
+        }
+
+        .content a {
+            display: block;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="ZZCode.webp" alt="ZZCode图标">
+        <h1>ZZCode官网</h1>
+        <a href="https://wwfx.lanzn.com/iXOkX2bcfjej" class="download-button">下载</a>
+    </div>
+     <div class="header">
+    <p>↓下划查看更多信息</p>
+     </div>
+    <div class="content">
+        <h1>ZZ Code (V1.0) 简介</h1>
+        <p>ZZ Code (V1.0) 是一个基于 Tkinter 的简单代码编辑器，旨在为用户提供一个轻量级且易于使用的编程环境（真的“轻量级而且易于使用”，使我的代码有问题都不知道在哪）。该编辑器支持基本的文件操作（如打开、保存和运行代码），特别适用于 Python 脚本的编写和执行。</p>
+        <h2>主要功能</h2>
+        <h3>文本编辑</h3>
+        <p>提供了一个文本编辑区域，用户可以在其中编写或修改代码。</p>
+        <h3>文件操作</h3>
+        <p>打开文件：用户可以选择一个文件并将其内容加载到编辑器中。</p>
+        <p>保存文件：用户可以将当前编辑的内容保存到指定的文件中，支持自动添加 .py 扩展名。</p>
+        <p>运行代码：用户可以运行当前编辑的 Python 脚本，并查看运行结果。</p>
+        <h1>注意事项</h1>
+        <p>1. 该编辑器仅支持 Python 脚本的编写和执行，不支持其他编程语言。</p>
+        <p>2. 由于开发者懒，ZZCode是一个py文件，需要用python运行。</p>
+        <p>3. 当前版本的ZZCode不支持第三方模块（本站开发者：ZZCode官方你做了个什么？）。</p>
+    </div>
+
+    <script>
+        let lastScrollTop = 0;
+        const contentElement = document.querySelector('.content');
+
+        function handleScroll() {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            if (scrollTop > lastScrollTop) {
+                // 向下滚动
+                contentElement.style.opacity = 1;
+            } else {
+                // 向上滚动
+                contentElement.style.opacity = 0;
+            }
+            lastScrollTop = scrollTop;
+        }
+
+        window.addEventListener('scroll', handleScroll);
+    </script>
+</body>
+</html>
